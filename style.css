@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+:root{
+--Pink: hsl(322, 100%, 66%);
+--Light-Pink: hsl(321, 100%, 78%);
+--Light-Red: hsl(0, 100%, 63%);
+--Very-Dark-Cyan: hsl(192, 100%, 9%);
+--Very-pale-Blue: hsl(207, 100%, 98%);
+--text-color:#314847;
+--under-number:#989B9F;
+--title:'Poppins',sans-serif;
+--text:'Open Sans',sans-serif;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  .container{
+    margin: 0 auto;
+    padding: 2rem 0 0 0;
+    font-family: var(--text);
+  }
+  .top,.first,.second,.third,.bottom{
+    padding: 0 2rem;
+  }
+  .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-top{
+    width: 90px;
+    height: 20px;
+  }
+  .try{
+    border: 0.5px solid var(--Pink);
+    border-radius: 1rem;
+    background-color: white;
+    color: var(--Light-Pink);
+    font-size: 10px;
+    height: 1.5rem;
+    width: 30%;
+    font-weight: bold;
+    box-shadow: hsl(322, 100%, 66%) 0px 0.4px 4px;
+  }
+  .try:hover{
+    border-color: var(--Light-Pink);
+    cursor: pointer;
+    box-shadow: hsl(321, 100%, 78%) 0px 0.4px 4px;
+  }
+  .first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+    background-image: url(./images/bg-section-top-mobile-1.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: -3rem;
+  }
+  .main-title{
+    font-size: 25px;
+    font-family: var(--title);
+    color: var(--Very-Dark-Cyan);
+  }
+  .first-text{
+    color: var(--Very-Dark-Cyan);
+    font-family: var(--title);
+    padding: 1.5rem 0 3rem 0;
+  }
+  button{
+   border-style: none;
+   background-color: var(--Pink);
+   color: white;
+   font-weight: bold;
+   border-radius: 1.3rem;
+   width: 76%;
+   height: 2.5rem;
+   font-size: 15px;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .first-img{
+    padding: 5rem 0 7rem 0;
+  }
+  .icon-image{
+    width:17%;
+  }
+  .number{
+    font-size: 50px;
+    font-weight: bolder;
+    color: var(--Very-Dark-Cyan);
+  }
+  .under-number{
+    color: var(--under-number);
+    font-size: 14px;
+   font-family: var(--text);
+  }
+  .right{
+    padding: 5rem 0 7rem 0;
+  }
+  .second{
+    padding: 3rem 0rem 0 0;
+  }
+  .curve{
+    text-align: center;
+  }
+  .second-image,.second-text{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .title{
+    color: var(--Very-Dark-Cyan);
+    font-family: var(--title);
+    font-size: 20px;
+    padding: 4rem 0 1.5rem 0;
+  }
+  .second-text{
+    padding: 0 0 9rem 0;
+  }
+  .one{
+    background-color: var(--Very-pale-Blue);
+    margin: 0;
+  }
+  .two{
+    background-image: url(./images/bg-section-bottom-mobile-2.svg) ,  url(./images/bg-section-top-mobile-2.svg) ;
+    background-position: top ,bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    padding-top: 15rem;
+  }
+  .three{
+    background-color: var(--Very-pale-Blue);
+  }
+  .third{
+    background-image: url(./images/bg-section-bottom-mobile-2.svg), url(./images/bg-footer-top-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top,bottom;
+    background-size: 100%;
+    text-align: center
+  }
+  .third-title{
+    color: var(--Very-Dark-Cyan);
+    padding: 8rem 0 2rem 0;
+    font-weight: bolder;
+  }
+  .get-started{
+    margin-bottom: 5rem;
+  }
+  .bottom{
+    color: white;
+    background-image: url(./images/bg-footer-top-mobile.svg);
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: var(--Very-Dark-Cyan);
+    padding-bottom: 13em;
+    padding-top: 0;
+  }
+  .phone,.email{
+    display: flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .bottom-text{
+    padding: 1.5rem 0;
+  }
+  input{
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border-style: none;
+    border-radius: 6px;
+    height: 2.5rem;
+  }
+  .bottom-right-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .subscribe{
+    border-radius: 6px;
+    width: 50%;
+  }
+  .subscribe:hover , .get-started:hover{
+    cursor: pointer;
+    background-color: var(--Light-Pink);
+    transition: 0.3s ease;
+  }
+  .bottom-left-text,.contact{
+    padding: 1rem 0;
+  }
+  .white-logo{
+    width: 55%;
+  }
+  .email{
+    padding: 1rem 0 2rem 0 ;
+  }
+  .social a{
+    color: white;
+    text-decoration: none;
+  }
+  i{
+    width: 10%;
+  }
+  @media only screen and (min-width:769px){
+    .logo-top{
+        width: 10%;
+        height: 30px;
+    }
+    .try{
+        width:8%;
+    }
+    .main-title{
+        font-size: 40px;
+    }
+    .first-text{
+        width: 40%;
+        margin: 0 auto;
+    }
+    .get-started{
+        width: 20%;
+        height: 3rem;
+    }
+    .first-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40%;
+        align-items: center;
+    }
+    .left{
+        transform: translateY(-0.4rem);
+    }
+    .first{
+        background-image: url(./images/bg-section-top-desktop-1.svg);
+        background-size: 100%;
+        padding-bottom: 10rem;
+    }
+    .second{
+        padding-top: 0;
+    }
+    .curve{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 2rem;
+        text-align: left;
+        
+    }
+    .texts-curve{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+    .curve img{
+        width:500px;
+    }
+    .one,.three{
+        flex-direction: row-reverse;
+        padding: 8rem 0;
+    }
+    .two{
+        background-image: url(./images/bg-section-bottom-desktop-2.svg) ,  url(./images/bg-section-top-desktop-2.svg) ;
+    background-position: top ,bottom;
+    background-repeat: no-repeat;
+    padding-top: 10rem;
+    background-size: 100%;
+    padding-bottom: 17rem;
+    }
+   
+    .third{
+        background-image: url(./images/bg-section-bottom-desktop-2.svg), url(./images/bg-footer-top-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top,bottom;
+        background-size: 100%;
+        text-align: center;
+        padding:10rem 0 15rem 0;
+    }
+    .second-text{
+        color: var(--Very-Dark-Cyan);
+        font-family:var(--text);
+    }
+    .title{
+        font-size: 35px;
+        text-align: left;
+        display: block;
+    }
+    .bottom{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .white-logo{
+        width: 30%;
+    }
+    .bottom-left-text{
+        width: 40%;
+    }
+    .bottom-right-bottom{
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    input{
+        width:60%;
+        transform: translateY(0.3rem);
+    }
+    .right{
+        width: 40%;
+    }
+    
+  }
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
